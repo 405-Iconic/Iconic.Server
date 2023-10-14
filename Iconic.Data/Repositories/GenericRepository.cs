@@ -54,4 +54,3 @@ namespace Iconic.Data.Repositories
             => await dbContext.SaveChangesAsync();
     }
 }
-}

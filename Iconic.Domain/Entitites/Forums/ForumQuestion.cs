@@ -13,7 +13,7 @@ namespace Iconic.Domain.Entitites.Forums
         public string Description { get; set; }
         public int ViewCount { get; set; }
 
-        public long UserId { get; set; }
+        public int UserId { get; set; }
         public User User { get; set; }
 
         public bool HasFoundAnswer { get; set; } = false;

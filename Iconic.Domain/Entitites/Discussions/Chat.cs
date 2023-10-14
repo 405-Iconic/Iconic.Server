@@ -12,7 +12,7 @@ namespace Iconic.Domain.Entitites.Discussions
     {
         public int UserId { get; set; }
         public User User { get; set; }
-        public int TeaxherId { get; set; }
+        public int TeacherId { get; set; }
         public Teacher Teacher { get; set; }
         public virtual ICollection<Message> Messages { get; set; }
     }

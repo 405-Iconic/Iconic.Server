@@ -8,7 +8,7 @@ namespace Iconic.Domain.Entities.Quizes
         public string Option { get; set; }
         public bool IsCorrect { get; set; }
 
-        public long QuestionId { get; set; }
+        public int QuestionId { get; set; }
         public Question Question { get; set; }
     }
 }

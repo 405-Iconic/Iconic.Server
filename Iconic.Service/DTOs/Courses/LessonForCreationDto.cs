@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.DTOs.Courses
 {
-    public class LessonForCreationDTO
+    public class LessonForCreationDto
     {
         [Required]
         public string Documentation { get; set; }

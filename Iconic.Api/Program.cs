@@ -31,9 +31,8 @@ builder.Services.AddCors(options =>
 
 
 // Add custom services
-/*builder.Services.AddAutoMapper(typeof(MappingProfile));
-builder.Services.ConfigureJwt(builder.Configuration);
-builder.Services.AddSwaggerService();*/
+//builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 builder.Services.AddCustomServices(); 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
