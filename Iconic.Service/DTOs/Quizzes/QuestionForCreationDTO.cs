@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.DTOs.Quizzes
 {
-    public class QuestionForCreationDTO
+    public class QuestionForCreationDto
     {
         public string Title { get; set; }
 

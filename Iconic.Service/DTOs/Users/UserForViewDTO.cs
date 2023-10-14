@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.DTOs.Users
 {
-    public class UserForViewDTO : Auditable
+    public class UserForViewDto : Auditable
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

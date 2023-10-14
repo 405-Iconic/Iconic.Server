@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.DTOs.Users
 {
-    public class UserForCreationDTO
+    public class UserForCreationDto
     {
         [Required]
         public string FirstName { get; set; }
