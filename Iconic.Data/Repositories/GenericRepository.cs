@@ -19,7 +19,7 @@ namespace Iconic.Data.Repositories
             this.dbSet = dbContext.Set<TSource>();
         }
 
-        public async ValueTask<TSource> AddAsync(TSource entity)
+        public async Task<TSource> AddAsync(TSource entity)
         {
             var entry = await dbSet.AddAsync(entity);
 
@@ -29,8 +29,9 @@ namespace Iconic.Data.Repositories
         public void Delete(TSource entity)
             => dbSet.Remove(entity);
 
-        public IQueryable<TSource> GetAll(Expression<Func<TSource, bool>> expression = null, string include = null
-            , bool isTracking = true)
+        public IQueryable<TSource> GetAll(Expression<Func<TSource, bool>> expression = null,
+            string include = null,
+            bool isTracking = true)
         {
             IQueryable<TSource> query = expression is null ? dbSet : dbSet.Where(expression);
 
@@ -44,13 +45,13 @@ namespace Iconic.Data.Repositories
             return query;
         }
 
-        public async ValueTask<TSource> GetAsync(Expression<Func<TSource, bool>> expression, string includes = null)
+        public async Task<TSource> GetAsync(Expression<Func<TSource, bool>> expression, string includes = null)
             => await GetAll(expression, includes).FirstOrDefaultAsync();
 
         public TSource Update(TSource entity)
             => dbSet.Update(entity).Entity;
 
-        public async ValueTask SaveChangesAsync()
+        public async Task SaveChangesAsync()
             => await dbContext.SaveChangesAsync();
     }
 }

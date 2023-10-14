@@ -14,6 +14,7 @@ namespace Iconic.Service.DTOs.Courses
         [Required]
         public string Description { get; set; }
         [Required]
+        public int TeacherId { get; set; }
         public string CategoryId { get; set; }
         public AttachmentForCreationDto File { get; set; }
     }

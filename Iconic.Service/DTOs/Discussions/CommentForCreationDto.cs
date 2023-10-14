@@ -1,5 +1,4 @@
-﻿using Iconic.Domain.Commons;
-using Iconic.Domain.Entitites.Discussions;
+﻿using Iconic.Domain.Entitites.Courses;
 using Iconic.Domain.Entitites.Users;
 using System;
 using System.Collections.Generic;
@@ -9,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.DTOs.Discussions
 {
-    public class ChatForViewDto : Auditable
+    public class CommentForCreationDto
     {
+        public int LessonId { get; set; }
         public int UserId { get; set; }
-        public int TeacherId { get; set; }
-        public virtual ICollection<MessageForViewDto> Messages { get; set; }
+        public string Text { get; set; }
     }
 }

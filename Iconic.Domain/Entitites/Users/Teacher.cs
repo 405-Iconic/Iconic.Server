@@ -1,4 +1,5 @@
-﻿using Iconic.Domain.Entitites.Courses;
+﻿using Iconic.Domain.Commons;
+using Iconic.Domain.Entitites.Courses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Domain.Entitites.Users
 {
-    public class Teacher
+    public class Teacher : Auditable
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

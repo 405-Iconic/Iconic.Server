@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Users\" />
-    <Folder Include="Interfaces\Courses\" />
-    <Folder Include="Interfaces\Disscussions\" />
-    <Folder Include="Interfaces\Forums\" />
-    <Folder Include="Interfaces\Quizes\" />
-    <Folder Include="Interfaces\Users\" />
 	<Folder Include="Services\Courses\" />
     <Folder Include="Services\Disscussions\" />
     <Folder Include="Services\Forums\" />
