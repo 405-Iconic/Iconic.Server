@@ -1,4 +1,5 @@
-﻿using Iconic.Domain.Entitites.Courses;
+﻿using Iconic.Domain.Configurations;
+using Iconic.Domain.Entitites.Courses;
 using Iconic.Service.DTOs.Courses;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Iconic.Service.Interfaces.Courses
         Task<CategoryForViewDto> CreateAsync(CategoryForCreationDto dto);
         Task<CategoryForViewDto> UpdateAsync(int id, CategoryForCreationDto dto);
         Task<bool> DeleteAsync(Expression<Func<Category, bool>> expression);
-        Task<IEnumerable<CategoryForViewDto>> GetAllAsync();
+        Task<IEnumerable<CategoryForViewDto>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null);
         Task<CategoryForViewDto> GetAsync(Expression<Func<Category,bool>> expression);
     }
 }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.Interfaces.Quizes
 {
-    internal interface IQuestionService
+    public interface IQuestionService
     {
         Task<QuestionForViewDto> CreateAsync(QuestionForCreationDto dto);
         Task<QuestionForViewDto> UpdateAsync(int id, QuestionForCreationDto dto);

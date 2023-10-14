@@ -14,5 +14,6 @@ namespace Iconic.Data.IRepositories
         Task<TSource> GetAsync(Expression<Func<TSource, bool>> expression, string includes = null);
         TSource Update(TSource entity);
         void Delete(TSource entity);
+        Task SaveChangesAsync();
     }
 }
