@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.DTOs.Users
 {
-    public class TeacherForViewDTO : Auditable
+    public class TeacherForViewDto : Auditable
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

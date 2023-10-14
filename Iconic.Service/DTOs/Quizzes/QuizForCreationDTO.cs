@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Iconic.Service.DTOs.Quizzes
 {
-    public class QuizForCreationDTO
+    public class QuizForCreationDto
     {
         public int LessonId { get; set; }
         public bool IsFirstQuiz { get; set; }

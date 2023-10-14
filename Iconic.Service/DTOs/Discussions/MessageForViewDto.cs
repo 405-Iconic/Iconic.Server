@@ -11,7 +11,7 @@ namespace Iconic.Service.DTOs.Discussions
         public Attachment Media { get; set; }
         public string Content { get; set; }
         public int ChatId { get; set; }
-        public UserForViewDTO Freelancer { get; set; }
-        public TeacherForViewDTO Teacher { get; set; }
+        public UserForViewDto Freelancer { get; set; }
+        public TeacherForViewDto Teacher { get; set; }
     }
 }
