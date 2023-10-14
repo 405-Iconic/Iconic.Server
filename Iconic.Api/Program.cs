@@ -1,11 +1,44 @@
+using Iconic.Api.Extensions;
+using Iconic.Data.Contexts;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Serilog;
+using System;
+    
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers();
+
+builder.Services.AddDbContext<AppDbContext>(option =>
+    option.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//Add authentication
+builder.Services.AddAuthentication();
+
+builder.Services.AddEndpointsApiExplorer();
+
+// Cors service
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+    });
+});
+
+
+// Add custom services
+/*builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.ConfigureJwt(builder.Configuration);
+builder.Services.AddSwaggerService();*/
+builder.Services.AddCustomServices(); 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -19,6 +52,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseAuthentication();
+app.UseRouting();
+app.UseStaticFiles();
 
 app.MapControllers();
 
