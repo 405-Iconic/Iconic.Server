@@ -1,5 +1,6 @@
 using Iconic.Api.Extensions;
 using Iconic.Data.Contexts;
+using Iconic.Service.Mappers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,8 +32,7 @@ builder.Services.AddCors(options =>
 
 
 // Add custom services
-//builder.Services.AddAutoMapper(typeof(MappingProfile));
-
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddCustomServices(); 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
