@@ -1,19 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Iconic.Data.Contexts;
+using Iconic.Data.IRepositories;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Iconic.Data.Repositories
 {
-    public class GenericRepository<TSource> : IRepository<TSource> where TSource : class
+    public class GenericRepository<TSource> : IGenericRepository<TSource> where TSource : class
     {
-        protected readonly ZaminEducationDbContext dbContext;
+        protected readonly AppDbContext dbContext;
         protected readonly DbSet<TSource> dbSet;
 
-        public Repository(ZaminEducationDbContext dbContext)
+        public GenericRepository(AppDbContext dbContext)
         {
             this.dbContext = dbContext;
             this.dbSet = dbContext.Set<TSource>();

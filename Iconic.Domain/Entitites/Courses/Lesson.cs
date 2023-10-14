@@ -14,7 +14,8 @@ namespace Iconic.Domain.Entitites.Courses
         public string Documentation { get; set; }
         public int CourseId { get; set; }
         public Course Course { get; set; }
-        public int AttachmentId { get; set; }
+        public int? AttachmentId { get; set; }
+        public Attachment Attachment { get; set; }
         public virtual ICollection<Video> Videos { get; set; }
         public ICollection<Quiz> Quizzes { get; set; }
     }

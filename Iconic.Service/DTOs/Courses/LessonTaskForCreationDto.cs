@@ -1,19 +1,18 @@
-﻿using Iconic.Domain.Commons;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Iconic.Domain.Entitites.Courses
+namespace Iconic.Service.DTOs.Courses
 {
-    public class LessonTask : Auditable
+    public class LessonTaskForCreationDto
     {
+        [Required]
         public string Title { get; set; }
+        [Required]
         public string Description { get; set; }
-
         public int? AttachmentId { get; set; }
-        public Attachment Attachment { get; set; }
-        public virtual ICollection<Submission> Submissions { get; set; }
     }
 }
