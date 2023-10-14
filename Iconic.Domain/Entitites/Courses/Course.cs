@@ -1,4 +1,5 @@
 ﻿using Iconic.Domain.Commons;
+using Iconic.Domain.Entitites.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Iconic.Domain.Entitites.Courses
         public string Description { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public int TeacherId { get; set; }
+        public Teacher Teacher { get; set; }
         public virtual ICollection<Lesson> Lessons { get; set; }
     }
 }
