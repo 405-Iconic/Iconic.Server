@@ -1,5 +1,6 @@
 ﻿using Iconic.Domain.Entities.Quizes;
 using Iconic.Domain.Entitites.Courses;
+using Iconic.Service.DTOs.Courses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Iconic.Service.DTOs.Quizzes
 
         public string Description { get; set; }
         public int QuizId { get; set; }
-        public int? AttachmentId { get; set; }
+        public AttachmentForCreationDto File { get; set; }
         public Lesson Lesson { get; set; }
     }
 }

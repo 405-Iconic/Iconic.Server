@@ -1,5 +1,6 @@
 ﻿using Iconic.Domain.Entitites.Discussions;
 using Iconic.Domain.Entitites.Users;
+using Iconic.Service.DTOs.Courses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Iconic.Service.DTOs.Discussions
 {
     public class MessageForCreationDto
     {
-        public int? MediaId { get; set; }
+        public AttachmentForCreationDto File { get; set; }
         public string Content { get; set; }
         public int ChatId { get; set; }
         public int? UserId { get; set; }

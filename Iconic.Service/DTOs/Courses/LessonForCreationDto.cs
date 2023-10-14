@@ -14,6 +14,6 @@ namespace Iconic.Service.DTOs.Courses
         public string Documentation { get; set; }
         [Required]
         public int CourseId { get; set; }
-        public int? AttachmentId { get; set; }
+        public AttachmentForCreationDto File { get; set; }
     }
 }
