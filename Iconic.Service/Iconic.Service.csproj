@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Iconic.Domain\Iconic.Domain.csproj" />
+    <ProjectReference Include="..\Iconic.Data\Iconic.Data.csproj" />
   </ItemGroup>
 
 </Project>

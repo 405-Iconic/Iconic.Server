@@ -34,7 +34,7 @@ namespace Iconic.Service.Mappers
 
             //discussion
             CreateMap<ChatForCreationDto, Chat>().ReverseMap();
-            CreateMap<ChatForViewDTO, Chat>().ReverseMap();
+            CreateMap<ChatForViewDto, Chat>().ReverseMap();
             CreateMap<MessageForCreationDto, Message>().ReverseMap();
             CreateMap<MessageForViewDto, Message>().ReverseMap();
 
