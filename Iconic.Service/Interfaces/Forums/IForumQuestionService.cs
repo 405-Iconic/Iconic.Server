@@ -18,6 +18,6 @@ namespace Iconic.Service.Interfaces.Forums
         Task<bool> DeleteAsync(Expression<Func<ForumQuestion, bool>> expression);
         Task<IEnumerable<ForumQuestionForViewDto>> GetAllAsync();
         Task<ForumQuestionForViewDto> GetAsync(Expression<Func<ForumQuestion, bool>> expression);
-        Task<bool> UserFoundAnswerToQuestion(long questionId);
+        Task<bool> UserFoundAnswerToQuestion(int questionId);
     }
 }

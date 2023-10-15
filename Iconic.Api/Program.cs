@@ -10,9 +10,6 @@ using Serilog;
 using System;
     
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllers();
-
 builder.Services.AddDbContext<AppDbContext>(option =>
     option.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -33,10 +30,11 @@ builder.Services.AddCors(options =>
 
 // Add custom services
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.ConfigureJwt(builder.Configuration);
+builder.Services.AddSwaggerService();
 builder.Services.AddCustomServices(); 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -50,9 +48,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
 
 app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseRouting();
 app.UseStaticFiles();
 

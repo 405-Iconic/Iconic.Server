@@ -18,6 +18,6 @@ namespace Iconic.Service.Interfaces.Teachers
         Task<TeacherForViewDto> GetAsync(Expression<Func<Teacher, bool>> predicate);
         Task<TeacherForViewDto> CreateAsync(TeacherForCreationDto TeacherDto);
         Task<bool> DeleteAsync(Expression<Func<Teacher, bool>> predicate);
-        Task<TeacherForViewDto> UpdateAsync(long id, TeacherForCreationDto TeacherDto);
+        Task<TeacherForViewDto> UpdateAsync(int id, TeacherForCreationDto TeacherDto);
     }
 }

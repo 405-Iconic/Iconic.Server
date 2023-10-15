@@ -30,7 +30,6 @@ namespace Iconic.Service.Mappers
             CreateMap<LessonForCreationDto, Lesson>().ReverseMap();
             CreateMap<LessonForViewDto,  Lesson>().ReverseMap();
             CreateMap<LessonTaskForCreationDto, LessonTask>().ReverseMap();
-            CreateMap<>
 
             //discussion
             CreateMap<ChatForCreationDto, Chat>().ReverseMap();

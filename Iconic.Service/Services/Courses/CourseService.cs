@@ -113,10 +113,10 @@ namespace Iconic.Service.Services.Courses
             if (course is null)
                 throw new HttpStatusCodeException(404, "Course not found");
 
-            long? attachmentId = null;
+            int? attachmentId = null;
             if (dto.File is not null)
             {
-                var attachment = await attachmentService.UpdateAsync(course.Id, dto.File.Stream);
+                var attachment = await attachmentService.UpdateAsync((int)course.ImageId, dto.File.Stream);
                 attachmentId = attachment.Id;
             }
             course = mapper.Map(dto, course);

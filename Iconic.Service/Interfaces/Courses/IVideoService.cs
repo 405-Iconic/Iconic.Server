@@ -12,12 +12,12 @@ namespace Iconic.Service.Interfaces.Courses
 {
     public interface IVideoService
     {
-        ValueTask<VideoForViewDto> CreateAsync(string link, long id);
-        ValueTask<ICollection<VideoForViewDto>> CreateRangeAsync(string youtubePlaylist, long courseId, long? courseModuleId = null);
-        ValueTask<bool> DeleteAsync(long youtubeId);
-        ValueTask<bool> DeleteRangeAsync(long courseId);
-        ValueTask<ICollection<VideoForViewDto>> UpdateRangeAsync(string youtubePlaylist, long courseId, long courseModuleId);
-        ValueTask<VideoForViewDto> UpdateAsync(long videoId, string link);
+        ValueTask<VideoForViewDto> CreateAsync(string link, int id);
+        ValueTask<ICollection<VideoForViewDto>> CreateRangeAsync(string youtubePlaylist, int courseId, int? courseModuleId = null);
+        ValueTask<bool> DeleteAsync(int youtubeId);
+        ValueTask<bool> DeleteRangeAsync(int courseId);
+        ValueTask<ICollection<VideoForViewDto>> UpdateRangeAsync(string youtubePlaylist, int courseId, int courseModuleId);
+        ValueTask<VideoForViewDto> UpdateAsync(int videoId, string link);
         ValueTask<VideoForViewDto> GetAsync(Expression<Func<Video, bool>> expression);
         ValueTask<IEnumerable<VideoForViewDto>> GetAllAsync(PaginationParams @params,
             Expression<Func<VideoForViewDto, bool>> expression = null);

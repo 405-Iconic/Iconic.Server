@@ -108,7 +108,7 @@ namespace Iconic.Service.Services.Courses
             return existAttachement;
         }
 
-        public async ValueTask<Attachment> UpdateAsync(long id, Stream stream)
+        public async ValueTask<Attachment> UpdateAsync(int id, Stream stream)
         {
             var existAttachment = await _repository.GetAsync(a => a.Id == id, null);
 

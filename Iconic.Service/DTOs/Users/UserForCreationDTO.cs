@@ -18,6 +18,6 @@ namespace Iconic.Service.DTOs.Users
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
-        public AttachmentForCreationDto Image { get; set; }
+        public AttachmentForCreationDto File { get; set; }
     }
 }

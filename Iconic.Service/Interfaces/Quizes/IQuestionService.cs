@@ -1,7 +1,5 @@
 ﻿using Iconic.Domain.Entities.Quizes;
-using Iconic.Domain.Entitites.s;
 using Iconic.Service.DTOs.Quizzes;
-using Iconic.Service.DTOs.s;
 using System;
 using System.Collections.Generic;
 using System.Linq;

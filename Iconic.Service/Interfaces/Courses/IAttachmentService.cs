@@ -14,7 +14,7 @@ namespace Iconic.Service.Interfaces.Courses
     {
         ValueTask<Attachment> UploadImageAsync(AttachmentForCreationDto dto);
         ValueTask<Attachment> UploadResumeAsync(AttachmentForCreationDto dto);
-        ValueTask<Attachment> UpdateAsync(long id, Stream stream);
+        ValueTask<Attachment> UpdateAsync(int id, Stream stream);
         ValueTask<bool> DeleteAsync(Expression<Func<Attachment, bool>> expression);
         ValueTask<Attachment> GetAsync(Expression<Func<Attachment, bool>> expression);
         ValueTask<Attachment> CreateAsync(string fileName, string filePath);
