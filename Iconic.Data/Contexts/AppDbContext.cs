@@ -2,6 +2,7 @@
 using Iconic.Domain.Entitites.Courses;
 using Iconic.Domain.Entitites.Discussions;
 using Iconic.Domain.Entitites.Forums;
+using Iconic.Domain.Entitites.News;
 using Iconic.Domain.Entitites.Users;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -39,6 +40,8 @@ namespace Iconic.Data.Contexts
         public virtual DbSet<SolvedQuestion> SolvedQuestions { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<New> News { get; set; }
+        public virtual DbSet<Gallery> Galleries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

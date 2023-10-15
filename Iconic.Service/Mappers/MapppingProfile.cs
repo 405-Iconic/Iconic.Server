@@ -30,17 +30,27 @@ namespace Iconic.Service.Mappers
             CreateMap<LessonForCreationDto, Lesson>().ReverseMap();
             CreateMap<LessonForViewDto,  Lesson>().ReverseMap();
             CreateMap<LessonTaskForCreationDto, LessonTask>().ReverseMap();
+            CreateMap<VideoForViewDto, Video>().ReverseMap();
 
             //discussion
             CreateMap<ChatForCreationDto, Chat>().ReverseMap();
+            CreateMap<ChatForViewDto, Chat>().ReverseMap();
             CreateMap<MessageForCreationDto, Message>().ReverseMap();
+            CreateMap<MessageForViewDto, Message>().ReverseMap();
+
+            //forum
             CreateMap<ForumAnswerForCreationDto, ForumAnswer>().ReverseMap();
+            CreateMap<ForumAnswerForViewDto, ForumAnswer>().ReverseMap();
             CreateMap<ForumQuestionForCreationDto, ForumQuestion>().ReverseMap();
+            CreateMap<ForumQuestionForViewDto, ForumQuestion>().ReverseMap();
             
             //quiz
             CreateMap<AnswerForCreationDto, Answer>().ReverseMap();
+            CreateMap<AnswerForViewDto, Answer>().ReverseMap();
             CreateMap<QuestionForCreationDto, Question>().ReverseMap();
+            CreateMap<QuestionForViewDto, Question>().ReverseMap();
             CreateMap<QuizForCreationDto, Quiz>().ReverseMap();
+            CreateMap<QuizForViewDto, Quiz>().ReverseMap();
             CreateMap<QuizResultForCreationDto, Quiz>().ReverseMap();
             CreateMap<SolvedQuestionForCreationDTO, SolvedQuestion>().ReverseMap();
             
@@ -49,7 +59,6 @@ namespace Iconic.Service.Mappers
             CreateMap<TeacherForViewDto, Teacher>().ReverseMap();
             CreateMap<UserForCreationDto, User>().ReverseMap();
             CreateMap<UserForViewDto, User>().ReverseMap();
-
         }
     }
 }
